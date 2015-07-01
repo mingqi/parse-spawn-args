@@ -7,7 +7,7 @@ If you need to spawn child process in Node.js, and need to parse a string comman
 
 ### parse args with quote around
 ```
-var parse = require('parse-spawn-args')
+var parse = require('parse-spawn-args').parse
 parse('-port 80 --title "this is a title"')
 /*
     [
@@ -21,7 +21,7 @@ parse('-port 80 --title "this is a title"')
 
 ### parse args with quote escape
 ```
-var parse = require('parse-spawn-args')
+var parse = require('parse-spawn-args').parse
 parse('-port 80 --title "this is a \\"title\\"')
 /*
     [
