@@ -313,20 +313,40 @@ module.exports = (function() {
       var s0, s1;
 
       peg$silentFails++;
+      s0 = [];
       if (input.charCodeAt(peg$currPos) === 9) {
-        s0 = peg$c6;
+        s1 = peg$c6;
         peg$currPos++;
       } else {
-        s0 = peg$FAILED;
+        s1 = peg$FAILED;
         if (peg$silentFails === 0) { peg$fail(peg$c7); }
       }
-      if (s0 === peg$FAILED) {
+      if (s1 === peg$FAILED) {
         if (input.charCodeAt(peg$currPos) === 32) {
-          s0 = peg$c8;
+          s1 = peg$c8;
           peg$currPos++;
         } else {
-          s0 = peg$FAILED;
+          s1 = peg$FAILED;
           if (peg$silentFails === 0) { peg$fail(peg$c9); }
+        }
+      }
+      while (s1 !== peg$FAILED) {
+        s0.push(s1);
+        if (input.charCodeAt(peg$currPos) === 9) {
+          s1 = peg$c6;
+          peg$currPos++;
+        } else {
+          s1 = peg$FAILED;
+          if (peg$silentFails === 0) { peg$fail(peg$c7); }
+        }
+        if (s1 === peg$FAILED) {
+          if (input.charCodeAt(peg$currPos) === 32) {
+            s1 = peg$c8;
+            peg$currPos++;
+          } else {
+            s1 = peg$FAILED;
+            if (peg$silentFails === 0) { peg$fail(peg$c9); }
+          }
         }
       }
       peg$silentFails--;

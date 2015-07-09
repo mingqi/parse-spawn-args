@@ -1,6 +1,6 @@
 {
   "name": "parse-spawn-args",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "parse string to spawn recognized arguments list",
   "main": "parser.js",
   "scripts": {

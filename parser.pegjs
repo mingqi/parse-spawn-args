@@ -10,8 +10,7 @@ args
 	}
 
 _ "whitespace"
-  = "\t"
-  / " "
+  = ( "\t" / " " ) *
 
 doubleQuotaChar
 	= [^"\\]
